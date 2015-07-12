@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>merge. home</title>
+        <!-- @include 'head' -->
+	</head>
+	<body>
+        <!-- @include 'svg-icons' -->
+		<div class="page-wrap">
+            <!-- @include 'header' -->
+            <main role="main"> 
+                <a class="button start-link" href="suspects.html"> <svg class="icon"><use xlink:href="#icon-view"></use></svg>View Potential Duplicates</a>
+                <article>
+                    <h3>the problem</h3>
+                    <p>Administrators of data systems often have to import data files or accept data from third-party systems. Import cuts down manual data entry, but data is really clean or current. This results in conflicts in records. Resolving these conflicts is typically a tedious process of finding and manually fixing conflicts. However, algorithmically merging has considerable risks involved. Typically, resolving conflicts requires a person's approval to ensure data integrity. It's also a relatively risky proposition because most databases join records in a destructive manner. Once the submit button is pressed the records are forever together.</p>
+                </article>
+                <article>
+                    <h3>intended user</h3>
+                    <p>HR staff that administer a large corporation's employee management system.</p>
+                </article>
+                <article>
+                    <h3>this demo</h3>                      
+                    <p>This interface concept demonstrates a method for merging duplicate records when importing data from a file or another data system. In this example, a user imported an Excel file of employee information. There are multiple suspected duplicate employees. Duplicates without differences can be merged at the click of a button or en masse. Those with differences&mdash;maybe "Bob" versus "Robert" or a transposed number in a employee number&mdash;will require walking the user through the merge process, which will be discussed later. The result is a process that helps the user feel comfortable the resulting data is clean by providing feedback and transparency through the process. Despite being a manual process, the interface gives a clear path and empowers the user to quickly make informed decisions. Typical merge operations are destructive, but this method (through hypothetical database) a new version of the employee record linked to the previous two, so that merging/separating can be non-destructive. A user can abandon or undo work as needed through the workflow.</p>
+                    
+                    <p><strong class="c-alert">Note:</strong> This is an interactive prototype to demonstrate interactions. This demo does not save information between pages, either client-side or in a database. It is purely to provide an overview of a interface solution to common data system workflow.</p>
+                    
+                    <p class="note">
+                        Notes in this format will appear on each page describing the page, expected user action, and design decisions.</p>
+                    </p>
+    
+                    
+                </article>
+                <article>
+                    <h3>technical information</h3>
+                    <p>This concept was built with HTML, Sass, jQuery, SVG, and JavaScript. Works in modern browsers that support <a href="http://caniuse.com/#feat=svg">SVG</a> and <a href="http://caniuse.com/#feat=flexbox">Flexbox</a>. Browser support aided by <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>.</p>
+                    <p>Typeface is <a href="http://weiweihuanghuang.github.io/Work-Sans/">Work Sans</a>. List filtering is provided by <a href="http://www.listjs.com">List.js</a>. Icons are from <a href="https://github.com/google/material-design-icons">Material Design Icon Set</a>.</p>
+                </article>                 
+                
+            </main>    		
+		</div>
+        <!-- @include 'footer' -->
+	</body>
+</html>

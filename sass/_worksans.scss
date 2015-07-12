@@ -1,0 +1,33 @@
+$location: "../fonts";
+$fontName: "WorkSans";
+$fontFamily: "Work Sans";
+
+//Regular
+@font-face {
+  font-family: $fontFamily;
+  src: url("#{$location}/#{$fontName}-Regular.woff") format("woff"),
+       url("#{$location}/#{$fontName}-Regular.ttf") format("truetype");
+  font-weight: regular;
+  font-weight: 400;
+  font-style: normal;
+}
+
+//Light
+@font-face {
+  font-family: $fontFamily;
+  src: url("#{$location}/#{$fontName}-Light.woff") format("woff"),
+       url("#{$location}/#{$fontName}-Light.ttf") format("truetype");
+  font-weight: lighter;
+  font-weight: 300;
+  font-style: normal;
+}
+
+//Semi-Bold
+@font-face {
+  font-family: $fontFamily;
+  src: url("#{$location}/#{$fontName}-SemiBold.woff") format("woff"),
+       url("#{$location}/#{$fontName}-SemiBold.ttf") format("truetype");
+  font-weight: bold;
+  font-weight: 600;
+  font-style: normal;
+}

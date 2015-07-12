@@ -1,0 +1,63 @@
+.toolbar {
+    margin-bottom: spacer(2.5);
+    display: flex;
+    position: relative;
+    
+    &-item {
+        flex: 1 0 auto;
+    }
+    
+    &-item:nth-child(2):not(:last-child) {
+        text-align: center;
+    }
+
+    &-item:last-child:not(:first-child) {
+        text-align: right;
+    }
+    
+    &-search {
+        width: 40%;
+        
+    }
+    
+    .button:not(.button-small) {
+        font-size: 1.5em;        
+    }
+    
+    .button {
+        &-small {
+            margin-left: spacer(1);
+        }        
+    }    
+}
+
+.search-container {
+    border: 1px solid $info;
+    display: flex;
+    padding: .25em .5em;
+    color: $info;
+    
+    input {
+        color: white;
+        background: none;
+        border: 0;
+        flex: 1 1 auto;
+        
+        &:focus ~ icon {
+            color: white;
+        }
+    }
+    
+    .icon {
+        height: 1.5em;
+        width: 1.5em;
+        top: 0;
+    }
+}
+
+.filter-highlight {
+    background-color: $warning;
+    color: $default;    
+    //text-shadow: 1px 1px .1em $black;
+    padding: .1em .25em;
+}

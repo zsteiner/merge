@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Merge.</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- @include 'head' -->
+	</head>
+	<body>
+        <!-- @include 'svg-icons' -->
+		<div class="page-wrap">
+            <!-- @include 'header' -->
+            <main role="main"> 
+                <nav class="app-nav">   
+                    <div><a href="suspects.html" class="button"><svg class="icon"><use xlink:href="#icon-arrow_back"></use></svg>back to possible duplicates</a></div>
+                    <div><a href="merge-2.html" class="button b-success"><svg class="icon"><use xlink:href="#icon-merge"></use></svg>merge these employees</a></div>
+                </nav>
+                
+                <h2 class="app-heading">Differences Between Employees</h2>
+                <p>There are 5 conflicts between the two records that need to be resolved before merging the records.</p>
+                <div class="card-container">    
+                    <div class="card">
+                        <h2>
+                            Employee A
+                        </h2>
+                        <ul class="card-values">
+                            <li>
+                                <label>Name</label>
+                                <span class="value">William Tuttle</span>
+                            </li>
+                            <li>
+                                <label>Employee Number</label>
+                                <span class="value"><svg class="icon card-difference"><use xlink:href="#icon-alert"></use></svg> #58645328</span>
+                            </li>
+                            <li>
+                                <label>Date of Birth</label>
+                                <span class="value">Nov 13, 1968</span>
+                            </li>
+                            <li>
+                                <label>Department</label>
+                                <span class="value">Development</span>
+                            </li>
+                            <li>
+                                <label>Location</label>
+                                <span class="value">312A, 3rd Floor</span>
+                            </li>
+                            <li>
+                                <label>Supervisor</label>
+                                <span class="value">Kelly Chambers</span>
+                            </li>
+                            <li>
+                                <label>Date of Hire (Tenure)</label>
+                                <span class="value"> Mar 8, 2010 (5 years, 4 months)</span>
+                            </li>
+                            <li>
+                                <label>Education</label>
+                                <span class="value">B.S.</span>
+                            </li>
+                            <li>
+                                <label>Address</label>
+                                <div><span class="value">123 Street</span></div>
+                                <div><span class="value">Anytown, SS 99999</span></div>
+                            </li>
+                            <li>
+                                <label>Emergency Contact</label>
+                                <span>Melissa Tuttle</span>
+                            </li>
+                            <li>
+                                <label>HR Contact</label>
+                                <span>Kenneth Towers</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        
+                        <h2>
+                            Employee B
+                        </h2>
+                        <ul class="card-values">
+                            <li>
+                                <label>Name</label>
+                                <span class="value">William Tuttle</span>
+                            </li>
+                            <li>
+                                <label>Employee Number</label>
+                                <span class="value"><svg class="icon card-difference"><use xlink:href="#icon-alert"></use></svg> #56845328</span>
+                            </li>
+                            <li>
+                                <label>Date of Birth</label>
+                                <span class="value">Nov 13, 1968</span>
+                            </li>
+                            <li>
+                                <label>Department</label>
+                                <span class="value">Development</span>
+                            </li>
+                            <li>
+                                <label>Location</label>
+                                <span class="value">312A, 3rd Floor</span>
+                            </li>
+                            <li>
+                                <label>Supervisor</label>
+                                <span class="value">Kelly Chambers</span>
+                            </li>
+                            <li>
+                                <label>Date of Hire (Tenure)</label>
+                                <span class="value"> Mar 8, 2010 (5 years, 4 months)</span>
+                            </li>
+                            <li>
+                                <label>Education</label>
+                                <span class="value">B.S.</span>
+                            </li>
+                            <li>
+                                <label>Address</label>
+                                <div><span class="value">123 Street</span></div>
+                                <div><span class="value">Anytown, SS 99999</span></div>
+                            </li>
+                            <li>
+                                <label>Emergency Contact</label>
+                                <span>Melissa Tuttle</span>
+                            </li>
+                            <li>
+                                <label>HR Contact</label>
+                                <span>Kenneth Towers</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <nav class="app-nav">   
+                    <div><a href="suspects.html" class="button"><svg class="icon"><use xlink:href="#icon-arrow_back"></use></svg>back to possible duplicates</a></div>
+                    <div><a href="merge-2.html" class="button b-success"><svg class="icon"><use xlink:href="#icon-merge"></use></svg>merge these employees</a></div>
+                </nav>
+
+                <p class="note">Once a suspected match is selected all of the conflicts are laid out with the rest of the information about the employee. This is a quick check to make sure the user wants to actually merge the clients. Returning to the list of duplicates abandons the match.</p>
+
+            </main>    		
+		</div>
+        <!-- @include 'footer' -->
+        <script type="text/javascript">
+            //List.js Intialization
+            var options = {
+              valueNames: [ 'name-a', 'name-b', 'id-a','id-a','time-a','time-b','match-number' ]
+            };
+            
+            var suspectList = new List('suspect-list', options);            
+        </script> 
+	</body>
+</html>

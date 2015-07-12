@@ -1,0 +1,149 @@
+$card-border: 1px solid $info;
+
+.card {
+    @include span-columns(6);
+    position: relative;
+    padding: 0 spacer(1) spacer(1);
+    min-height: 18em;
+    border: $card-border;
+    
+    &-container {
+        @include clearfix;
+        margin: spacer(2) 0;
+    }
+    
+    h2 {
+        overflow: hidden;
+        margin: 0 spacer(-1);
+        padding: spacer(.5) spacer(1);
+        border-bottom: $card-border;
+        color: $secondary;
+        font-size: 1.5em;         
+    }
+
+    &-select {
+        border-color: $secondary;
+        
+        h2 {
+            border-color: $secondary;
+        }
+    }
+    
+    label {
+        display: block;
+        color: $info;
+    }
+    
+    &-values {
+        margin: spacer(1) 0;
+        
+        li {
+            margin-bottom: spacer(1.5);
+            line-height: 1.25;
+        }
+    }
+    
+    &-difference {
+        color: $alert;
+    }
+    
+    &-content {
+        margin: spacer(1) 0;
+        font-size: 2.5em;
+        
+        li {
+            display: none;
+        }
+        
+        label {
+            margin-bottom: spacer(.5);  
+            font-size: .75em;
+        }
+    }
+    
+    .is-current {
+        display: block;
+    }
+}
+
+.icon-checked {
+    display: none;
+}
+
+.is-selected { 
+    .icon-checked {
+        display: inline-block;
+    }
+
+    .icon-unchecked {
+        display: none;
+    }
+}
+
+.keyboard-hint {
+    margin: spacer(8) 0 spacer(2);
+    color: white;
+    font-size: 1.25em;
+    line-height: 2;
+}
+
+.keyboard-key {
+    display: inline-block;    
+    margin: 0 spacer(.25);
+    padding: spacer(.5);
+    width: 2em;
+    height: 2em;
+    border: $card-border;
+    border-color: white;
+    border-radius: 12%;
+    color: white;
+    text-align: center;
+    line-height: 1.25; 
+}
+
+.with-keys .card {
+    cursor: pointer;
+    
+    &:hover, &:hover h2 {
+        border-color: $link-hover;
+    }
+    
+    &:hover h2 {
+        color: $link-hover;
+    }
+    
+    &:after {
+        @extend .keyboard-key;
+        position: absolute;
+        bottom: spacer(-4);
+        left: 50%;
+        margin-left: spacer(-2.25);
+        content: attr(data-card-label);
+        font-size: 1.5em;
+    }
+    
+    &:hover:after, &.is-selected:after {
+        background-color: white;
+        color: $default;
+    }
+}
+
+.success-message {
+    padding: spacer(5) 0;
+    min-height: 18em;
+    text-align: center;
+    
+    & + .keyboard-hint {
+        display: none;
+    }
+
+    &.is-hidden + .keyboard-hint {
+        display: block;
+    }
+    
+    .button-large {
+        font-size: 2em;
+    }
+}
+
+@import 'notes';

@@ -1,0 +1,13 @@
+body {
+    background-color: $default;
+    color: white;
+}
+
+main {
+    padding: spacer(2) spacer(2);
+    @include outer-container;
+}
+
+article + article {
+    margin-top: spacer(2);
+}

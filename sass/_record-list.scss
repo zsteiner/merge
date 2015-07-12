@@ -1,0 +1,56 @@
+.record-item {
+    @include outer-container;
+    border-bottom: 1px solid $info; 
+    padding-bottom: spacer(1.5);
+    margin-top: spacer(1.5);
+    
+    &:last-child {
+        border: 0;
+    }
+    
+    time {
+        color: $info;
+        display: block;
+        font-size: .875em;
+        margin: spacer(.5) 0;
+    }
+}
+
+.record {
+    @include span-columns(4);   
+}
+
+.record-match {
+    @include span-columns(2);
+    
+    h5 {
+        margin: 0;
+        color: $warning;
+        
+        + * {
+            color: $info;
+        }
+    }
+}
+
+.record-action {
+    @include span-columns(2);
+    
+    .button {
+        font-size: 1.25em;
+    }
+    
+    .button + .button {
+        margin-top: spacer(.5);
+    }
+    
+    .button-small {
+        font-size: .875em;        
+    }
+}
+
+.employee-number {
+    margin-top: spacer(.5);
+    font-size: .875em;
+}
+

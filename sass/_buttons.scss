@@ -1,0 +1,54 @@
+$icon-inset: 1.25em;
+
+.button {
+    display: inline-block;
+    line-height: 1.25;
+    cursor: pointer; 
+    padding-left: $icon-inset;
+
+    &-small {
+        font-size: 1rem;
+    }
+
+    .icon {
+        margin: 0 .25em 0 ($icon-inset * -1);
+    }
+}
+
+.button.icon-right {
+    padding-left: 0;
+    
+    .icon {
+        margin: 0;
+    }
+}
+
+a.b-success {
+    color: $success;
+    
+    &:hover {
+        color: darken($success, 20%);
+    }
+}
+
+a.b-alert {
+    color: $alert;
+
+    &:hover {
+        color: darken($alert, 20%);
+    }
+}
+
+a.b-warning {
+    color: $warning;
+
+    &:hover {
+        color: darken($warning, 20%);
+    }
+
+}
+
+.start-link {
+    margin: spacer(2) 0;
+    font-size: 2em;
+}

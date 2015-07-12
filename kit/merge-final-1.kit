@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Merge.</title>
+        <!-- @include 'head' -->
+	</head>
+	<body>
+        <!-- @include 'svg-icons' -->
+		<div class="page-wrap">
+            <!-- @include 'header' -->
+            <main role="main"> 
+                <nav class="app-nav">   
+                    <div><a href="merge-1.html" class="button"><svg class="icon"><use xlink:href="#icon-arrow_back"></use></svg>back to conflicts</a></div>
+                    <div>
+                        <a class="button b-success button-merge button-merge-all"><svg class="icon"><use xlink:href="#icon-merge"></use></svg>save merged employee</a>
+                        <span class="merged-record is-hidden">
+                            <a class="button b-success"><svg class="icon"><use xlink:href="#icon-check"></use></svg>employee merged</a>
+                            <a class="button b-alert button-small button-split button-split-all"><svg class="icon"><use xlink:href="#icon-split"></use></svg>split records</a>
+                        </span>
+                    </div>
+                </nav>
+                
+                <div class="card-container">    
+                    <div class="card">
+                        <h2>
+                            Final Merged Employee Record
+                        </h2>
+                        <ul class="card-values">
+                            <li>
+                                <label>Name</label>
+                                <span class="value">William Sullivan</span>
+                            </li>
+                            <li>
+                                <label>Employee Number</label>
+                                <span class="value">#58645328</span>
+                            </li>
+                            <li>
+                                <label>Date of Birth</label>
+                                <span class="value">Mar 4, 1979</span>
+                            </li>
+                            <li>
+                                <label>Department</label>
+                                <span class="value">Legal</span>
+                            </li>
+                            <li>
+                                <label>Location</label>
+                                <span class="value">1471, 14th Floor</span>
+                            </li>
+                            <li>
+                                <label>Supervisor</label>
+                                <span class="value">Molly Hernandez</span>
+                            </li>
+                            <li>
+                                <label>Date of Hire (Tenure)</label>
+                                <span class="value"> Mar 8, 2010 (5 years, 4 months)</span>
+                            </li>
+                            <li>
+                                <label>Education</label>
+                                <span class="value">J.D.</span>
+                            </li>
+                            <li>
+                                <label>Address</label>
+                                <div><span class="value">123 Street Rd.</span></div>
+                                <div><span class="value">Anytown, SS 99999</span></div>
+                            </li>
+                            <li>
+                                <label>Emergency Contact</label>
+                                <span>Jonathan Smith</span>
+                            </li>
+                            <li>
+                                <label>HR Contact</label>
+                                <span>Vanessa Tobias</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <nav class="app-nav">   
+                    <div><a href="merge-1.html" class="button"><svg class="icon"><use xlink:href="#icon-arrow_back"></use></svg>back to conflicts</a></div>
+                    <div>
+                        <a class="button b-success button-merge button-merge-all"><svg class="icon"><use xlink:href="#icon-merge"></use></svg>save merged employee</a>
+                        <span class="merged-record is-hidden">
+                            <a class="button b-success"><svg class="icon"><use xlink:href="#icon-check"></use></svg>employee merged</a>
+                            <a class="button b-alert button-small button-split button-split-all"><svg class="icon"><use xlink:href="#icon-split"></use></svg>split records</a>
+                        </span>
+                    </div>
+                </nav>
+
+                <p class="note">To provide transparency, the final step provides the user feedback on their work before submitting it. The user can return to resolve conflicts, if something does not look correct. Alternately, the user can abandon the whole merge without consequence or undo the merge immediately.</p>
+            </main>    		
+		</div>
+        <!-- @include 'footer' -->
+        <script src="scripts/suspects.js"></script>
+	</body>
+</html>

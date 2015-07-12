@@ -1,0 +1,26 @@
+.app-nav {
+    @include outer-container;
+    //  margin: spacer(1) 0;
+    overflow: auto;
+    font-size: 1.25em;
+    
+    * {
+        vertical-align: top;
+    }
+    
+    > :first-child:nth-last-child(2) {
+       @include span-columns(6); 
+        }
+    
+    > :last-child:nth-child(2) {
+        @include span-columns(6);
+        text-align: right;  
+        font-size: 1.25em;
+        margin-top: -.25em;
+    }
+    
+    .button-small {
+        margin: spacer(.5) 0 0 spacer(1);
+        
+    }
+}

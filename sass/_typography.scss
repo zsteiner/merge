@@ -1,0 +1,65 @@
+@import "worksans"; //Fontface partial goes here.
+
+$font-stack-sans-serif: Work Sans, Helvetica, Arial, sans-serif;
+
+body {
+	font-weight: 400;
+	font-family: $font-stack-sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-bottom: .5em;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.75em;
+}
+
+h5 {
+    font-size: 1.5em;
+}
+
+p {
+    line-height: 1.25;
+    color: white;
+    
+    & + p {
+        margin-top: 1em;
+    }
+}
+
+a, a:visited {
+    color: $secondary;
+    text-decoration: none;
+    
+    &:hover {
+        color: $link-hover;
+    }
+}
+
+.app-heading {
+    margin-top: 1em;
+    font-weight: 300;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.c-alert {
+    color: $alert;   
+}

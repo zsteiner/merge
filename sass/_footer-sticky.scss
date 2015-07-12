@@ -1,0 +1,39 @@
+$footer-size: 4em;
+
+html, body {
+  height: 100%;
+}
+
+.page-wrap {
+  margin-bottom: -$footer-size;
+  min-height: 100%;
+}
+
+.page-wrap:after {
+  display: block;
+  content: "";
+  z-index: -1;
+}
+
+footer, .page-wrap:after {
+  height: $footer-size; 
+}
+
+//Mobile Style ... break point from Bootstrap
+@media (max-width: 320px) { 
+	$footer-size-mobile: $footer-size;
+		
+	.page-wrap {
+	  margin-bottom: -$footer-size-mobile;
+	}
+	
+	footer, .page-wrap:after {
+	  height: $footer-size-mobile; 
+	}
+}
+
+footer {
+    padding: spacer(1);
+    background-color: $black;
+    color: white;
+}
