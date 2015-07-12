@@ -75,19 +75,19 @@ html {
 
 @font-face {
   font-family: "Work Sans";
-  src: url("../fonts/WorkSans-Regular.woff") format("woff"), url("../fonts/WorkSans-Regular.ttf") format("truetype");
+  src: url("../../global/fonts/WorkSans-Regular.woff") format("woff"), url("../../global/fonts/WorkSans-Regular.ttf") format("truetype");
   font-weight: regular;
   font-weight: 400;
   font-style: normal; }
 @font-face {
   font-family: "Work Sans";
-  src: url("../fonts/WorkSans-Light.woff") format("woff"), url("../fonts/WorkSans-Light.ttf") format("truetype");
+  src: url("../../global/fonts/WorkSans-Light.woff") format("woff"), url("../../global/fonts/WorkSans-Light.ttf") format("truetype");
   font-weight: lighter;
   font-weight: 300;
   font-style: normal; }
 @font-face {
   font-family: "Work Sans";
-  src: url("../fonts/WorkSans-SemiBold.woff") format("woff"), url("../fonts/WorkSans-SemiBold.ttf") format("truetype");
+  src: url("../../global/fonts/WorkSans-SemiBold.woff") format("woff"), url("../../global/fonts/WorkSans-SemiBold.ttf") format("truetype");
   font-weight: bold;
   font-weight: 600;
   font-style: normal; }
