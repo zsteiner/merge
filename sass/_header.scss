@@ -1,6 +1,11 @@
 header {
     background-color: $primary;
-    padding: spacer(1); 
+    padding: spacer(1);
+    display: flex;
+    
+    .header-title {
+        flex: 1 1 auto;
+    }
     
     h1 {
         color: white;

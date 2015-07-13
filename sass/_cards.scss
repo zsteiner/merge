@@ -1,12 +1,48 @@
 $card-border: 1px solid $info;
 
 .card {
-    @include span-columns(6);
     position: relative;
     padding: 0 spacer(1) spacer(1);
     min-height: 18em;
     border: $card-border;
+
+    &, &-note {
+        @include span-columns(6);
+
+        @include media($mobile) {
+          @include span-columns(12);
+          min-height: 4em;
+        }    
+
+    }
     
+    &-note {
+        padding-left: spacer(2);
+
+        p {
+            margin-top: 0;
+            line-height: 1.5;
+            font-size: 1.5em; 
+        }
+        
+        .button {
+            font-size: 2em;
+            margin-top: spacer(1);
+            
+            &-small {
+                font-size: 1.25rem;
+                display: block;
+                margin-top: spacer(.5);
+            }
+        }
+    }
+    
+    & + & {
+        @include media($mobile) {
+          margin-top: spacer(1);
+        }            
+    }
+
     &-container {
         @include clearfix;
         margin: spacer(2) 0;
@@ -18,7 +54,14 @@ $card-border: 1px solid $info;
         padding: spacer(.5) spacer(1);
         border-bottom: $card-border;
         color: $secondary;
-        font-size: 1.5em;         
+        font-size: 1.5em;
+        
+        time {
+            display: block;
+            font-size: .875rem;
+            margin-top: spacer(.5);
+            color: $info;
+        }         
     }
 
     &-select {
@@ -50,6 +93,10 @@ $card-border: 1px solid $info;
     &-content {
         margin: spacer(1) 0;
         font-size: 2.5em;
+
+        @include media($mobile) {
+          font-size: 1.5rem;
+        }    
         
         li {
             display: none;
@@ -85,6 +132,10 @@ $card-border: 1px solid $info;
     color: white;
     font-size: 1.25em;
     line-height: 2;
+
+    @include media($mobile) {
+      display: none !important;
+    }    
 }
 
 .keyboard-key {
@@ -120,16 +171,25 @@ $card-border: 1px solid $info;
         margin-left: spacer(-2.25);
         content: attr(data-card-label);
         font-size: 1.5em;
+
+        @include media($mobile) {
+          display: none;
+        }    
     }
     
-    &:hover:after, &.is-selected:after {
+    &:hover:after {
+        background-color: transparentize(white, .75);
+        //color: $default;
+    }
+
+    &.is-selected:after {
         background-color: white;
         color: $default;
     }
 }
 
 .success-message {
-    padding: spacer(5) 0;
+    padding: spacer(5);
     min-height: 18em;
     text-align: center;
     
@@ -143,6 +203,7 @@ $card-border: 1px solid $info;
     
     .button-large {
         font-size: 2em;
+        margin-bottom: spacer(1.5);
     }
 }
 

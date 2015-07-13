@@ -4,23 +4,62 @@
     overflow: auto;
     font-size: 1.25em;
     
-    * {
+    > * {
         vertical-align: top;
     }
     
     > :first-child:nth-last-child(2) {
        @include span-columns(6); 
-        }
+
+        @include media($mobile) {
+          @include span-columns(12);
+          margin-bottom: spacer(1);
+        }    
+    }
     
     > :last-child:nth-child(2) {
         @include span-columns(6);
         text-align: right;  
         font-size: 1.25em;
         margin-top: -.25em;
+
+        @include media($mobile) {
+          @include span-columns(12);
+            text-align: left;
+        }    
     }
     
     .button-small {
         margin: spacer(.5) 0 0 spacer(1);
         
+    }
+}
+
+header nav {
+    text-align: right;
+    
+    li {
+        display: inline-block;
+
+        a, a:visited {
+            display: block;
+            margin-top: spacer(.75);
+            padding: spacer(.5);
+            font-size: 1.5em;
+            color: white;
+            
+            &:hover {
+                color: $secondary;   
+            }
+            
+            &.is-current {
+                color: white;
+                background-color: darken($primary, 15%);
+            }
+        }
+    }
+    
+    li:not(:last-of-type) {
+        margin-right: spacer(1);
     }
 }

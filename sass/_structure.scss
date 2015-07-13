@@ -6,6 +6,10 @@ body {
 main {
     padding: spacer(2) spacer(2);
     @include outer-container;
+
+    @include media($mobile) {
+      padding: spacer(1);
+    }    
 }
 
 article + article {

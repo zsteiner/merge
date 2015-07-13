@@ -2,11 +2,21 @@
     height: 2em;
     border: 1px solid $success;
     flex: 1 1 auto;
+
+    @include media($mobile) {
+      flex: none;
+      width: 100%;
+    }    
     
     &-container {
-        overflow: auto;
+        overflow: hidden;
         display: flex;
         margin-top: spacer(1.5);
+
+        @include media($mobile) {
+          display: block;
+        }    
+
     }
     
     &-label {
@@ -15,10 +25,17 @@
         font-size: 1.5em;
         color: $success;
         padding-top: spacer(.25);
+
+        @include media($mobile) {
+          float: none;
+          width: 100%;
+          margin-bottom: spacer(.5);
+        }    
+
     }
     
     &-bar {
-        float: left;
+        //float: left;
         width: 0;
         background-color: $success;
         height: 100%;

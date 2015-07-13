@@ -5,13 +5,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/merge.css" type="text/css" media="all">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>	</head>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<script src="scripts/jquery-2.1.4.min.js"></script>	</head>
 	<body>
         <svg display="none" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
 <symbol id="icon-alert" viewBox="0 0 1024 1024">
 	<title>alert</title>
 	<path class="path1" d="M512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM470 298h84v256h-84v-256zM470 640h84v86h-84v-86z"></path>
+</symbol>
+<symbol id="icon-plus" viewBox="0 0 1024 1024">
+	<title>plus</title>
+	<path class="path1" d="M512 42.667q95.667 0 182.5 37.167t149.667 100 100 149.667 37.167 182.5-37.167 182.5-100 149.667-149.667 100-182.5 37.167-182.5-37.167-149.667-100-100-149.667-37.167-182.5 37.167-182.5 100-149.667 149.667-100 182.5-37.167zM512 128q-78 0-149.167 30.5t-122.5 81.833-81.833 122.5-30.5 149.167 30.5 149.167 81.833 122.5 122.5 81.833 149.167 30.5 149.167-30.5 122.5-81.833 81.833-122.5 30.5-149.167-30.5-149.167-81.833-122.5-122.5-81.833-149.167-30.5zM512 298.667q17.667 0 30.167 12.5t12.5 30.167v128h128q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-128v128q0 17.667-12.5 30.167t-30.167 12.5-30.167-12.5-12.5-30.167v-128h-128q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5h128v-128q0-17.667 12.5-30.167t30.167-12.5z"></path>
 </symbol>
 <symbol id="icon-warning" viewBox="0 0 1024 1024">
 	<title>warning</title>
@@ -77,8 +82,14 @@
 </svg>
 		<div class="page-wrap">
             <header>    
-	<a href="index.html"><h1><svg class="icon"><use xlink:href="#icon-merge"></use></svg>merge</h1></a>
-    <!--<div class="subtitle">something clever</div> -->
+	<a href="index.html" class="header-title"><h1><svg class="icon"><use xlink:href="#icon-merge"></use></svg>merge</h1></a>
+    <nav>
+        <ul>
+            <li><a href="index.html">description</a></li>
+            <li><a href="suspects.html">incoming records</a></li>
+            <li><a href="overview.html" class="is-hidden">record overview</a></li>
+        </ul> 
+    </nav>
 </header>
             <main role="main"> 
                 <nav class="app-nav">   
@@ -208,7 +219,7 @@
         <footer> 
 	by Zach Steiner <a href="http://zachsteiner.com">zachsteiner.com</a>
 </footer>
-        <script type="text/javascript">
+<script src="scripts/page.js"></script>        <script type="text/javascript">
             //List.js Intialization
             var options = {
               valueNames: [ 'name-a', 'name-b', 'id-a','id-a','time-a','time-b','match-number' ]

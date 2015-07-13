@@ -17,11 +17,22 @@
 }
 
 .record {
-    @include span-columns(4);   
+    @include span-columns(4);
+    overflow: hidden;
+
+    @include media($mobile) {
+      @include span-columns(6);
+      margin-bottom: spacer(.5);
+    }    
+       
 }
 
 .record-match {
     @include span-columns(2);
+
+    @include media($mobile) {
+      @include span-columns(6);
+    }    
     
     h5 {
         margin: 0;
@@ -35,6 +46,10 @@
 
 .record-action {
     @include span-columns(2);
+
+    @include media($mobile) {
+      @include span-columns(6);
+    }    
     
     .button {
         font-size: 1.25em;
