@@ -33,9 +33,16 @@ $('.button-split').click(function(){
 
 $('.button-merge-all').click(function(){
    $('.button-merge').addClass('is-hidden').next('.merged-record').removeClass('is-hidden');
+
+   $('.notification').removeClass('is-hidden');
+});
+
+$('.button-save').click(function(){
+   $('.notification').removeClass('is-hidden');
 });
 
 $('.button-split-all').click(function(){
    $('.button-merge').removeClass('is-hidden').next('.merged-record').addClass('is-hidden');
-   console.log('split all');
+   
+   $('.notification').addClass('is-hidden');
 });

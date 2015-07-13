@@ -1,0 +1,14 @@
+.notification {
+    background-color: $success;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    padding: spacer(1) 0;
+    color: $default;
+    transition: .3s all linear;
+    
+    &.is-hidden {
+        display: block !important;
+        margin-top: -3.25rem;    
+    }
+}

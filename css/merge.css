@@ -663,3 +663,16 @@ header nav {
   background-color: #FFCA4C;
   color: #3A3B3D;
   padding: .1em .25em; }
+
+.notification {
+  background-color: #39EA28;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  padding: 1rem 0;
+  color: #3A3B3D;
+  -webkit-transition: .3s all linear;
+          transition: .3s all linear; }
+  .notification.is-hidden {
+    display: block !important;
+    margin-top: -3.25rem; }
