@@ -442,18 +442,23 @@ header nav {
       content: "";
       display: table;
       clear: both; }
+  .card time {
+    position: absolute;
+    display: block;
+    font-size: 1rem;
+    color: #959EA5;
+    bottom: 0.75rem; }
   .card h2 {
     overflow: hidden;
+    position: relative;
     margin: 0 -1rem;
     padding: 0.5rem 1rem;
     border-bottom: 1px solid #959EA5;
     color: #6FD6E9;
     font-size: 1.5em; }
     .card h2 time {
-      display: block;
-      font-size: .875rem;
-      margin-top: 0.5rem;
-      color: #959EA5; }
+      position: static;
+      margin-top: 0.5rem; }
   .card-select {
     border-color: #6FD6E9; }
     .card-select h2 {

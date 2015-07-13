@@ -47,9 +47,18 @@ $card-border: 1px solid $info;
         @include clearfix;
         margin: spacer(2) 0;
     }
+
+    time {
+        position: absolute;
+        display: block;
+        font-size: 1rem;
+        color: $info;
+        bottom: spacer(.75);
+    }         
     
     h2 {
         overflow: hidden;
+        position: relative;
         margin: 0 spacer(-1);
         padding: spacer(.5) spacer(1);
         border-bottom: $card-border;
@@ -57,12 +66,12 @@ $card-border: 1px solid $info;
         font-size: 1.5em;
         
         time {
-            display: block;
-            font-size: .875rem;
+            position: static;
             margin-top: spacer(.5);
-            color: $info;
-        }         
+        }        
     }
+
+
 
     &-select {
         border-color: $secondary;
