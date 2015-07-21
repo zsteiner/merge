@@ -282,7 +282,11 @@ a.b-warning {
       width: 48.821174201%;
       margin-bottom: 0.5rem; }
       .record:last-child {
-        margin-right: 0; } }
+        margin-right: 0; }
+      .record:nth-child(2n) {
+        margin-right: 0; }
+      .record:nth-child(2n+1) {
+        clear: left; } }
 
 .record-match {
   float: left;
@@ -317,7 +321,8 @@ a.b-warning {
       float: left;
       display: block;
       margin-right: 2.3576515979%;
-      width: 48.821174201%; }
+      width: 100%;
+      margin-top: 1rem; }
       .record-action:last-child {
         margin-right: 0; } }
   .record-action .button {
@@ -383,6 +388,9 @@ a.b-warning {
 
 header nav {
   text-align: right; }
+  @media screen and (max-width: 500px) {
+    header nav {
+      display: none; } }
   header nav li {
     display: inline-block; }
     header nav li a, header nav li a:visited {
@@ -433,6 +441,10 @@ header nav {
         font-size: 1.25rem;
         display: block;
         margin-top: 0.5rem; }
+    @media screen and (max-width: 500px) {
+      .card-note {
+        margin-top: 2rem;
+        padding-left: 1rem; } }
   @media screen and (max-width: 500px) {
     .card + .card {
       margin-top: 1rem; } }
@@ -550,6 +562,11 @@ header nav {
   .success-message .button-large {
     font-size: 2em;
     margin-bottom: 1.5rem; }
+  @media screen and (max-width: 500px) {
+    .success-message {
+      padding: 1rem; }
+      .success-message .button-large {
+        font-size: 1.5rem; } }
 
 .note {
   margin: 2rem 0;
@@ -662,7 +679,9 @@ header nav {
 .filter-highlight {
   background-color: #FFCA4C;
   color: #3A3B3D;
-  padding: .1em .25em; }
+  position: relative;
+  padding: .2em .25em;
+  top: .2em; }
 
 .notification {
   background-color: #39EA28;
@@ -675,4 +694,4 @@ header nav {
           transition: .3s all linear; }
   .notification.is-hidden {
     display: block !important;
-    margin-top: -3.25rem; }
+    margin-top: -4.75rem; }

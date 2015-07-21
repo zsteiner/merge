@@ -74,7 +74,9 @@
 
 .filter-highlight {
     background-color: $warning;
-    color: $default;    
-    //text-shadow: 1px 1px .1em $black;
-    padding: .1em .25em;
+    color: $default;
+    position: relative;    
+    padding: .2em .25em;
+    top: .2em;
+    
 }

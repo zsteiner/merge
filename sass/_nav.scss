@@ -38,6 +38,10 @@
 header nav {
     text-align: right;
     
+    @include media($mobile) {
+        display: none;
+    }
+    
     li {
         display: inline-block;
 

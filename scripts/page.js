@@ -3,8 +3,6 @@ $('header nav a').each(function(){
    
    pagePathName = pagePathName.substring(pagePathName.lastIndexOf("/") + 1);
    
-   console.log(pagePathName);
-   
    var hrefName = $(this).attr('href');
    
    if (pagePathName === hrefName) {

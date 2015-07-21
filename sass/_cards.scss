@@ -35,6 +35,11 @@ $card-border: 1px solid $info;
                 margin-top: spacer(.5);
             }
         }
+        
+        @include media($mobile) {
+            margin-top: spacer(2);
+            padding-left: spacer(1);
+        }
     }
     
     & + & {
@@ -53,7 +58,7 @@ $card-border: 1px solid $info;
         display: block;
         font-size: 1rem;
         color: $info;
-        bottom: spacer(.75);
+        bottom: spacer(.75);        
     }         
     
     h2 {
@@ -70,8 +75,6 @@ $card-border: 1px solid $info;
             margin-top: spacer(.5);
         }        
     }
-
-
 
     &-select {
         border-color: $secondary;
@@ -214,6 +217,17 @@ $card-border: 1px solid $info;
         font-size: 2em;
         margin-bottom: spacer(1.5);
     }
+
+    @include media($mobile) {
+        padding: spacer(1);
+        
+        .button-large {
+            font-size: 1.5rem;
+        }
+    }
+    
+
+
 }
 
 @import 'notes';
