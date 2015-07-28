@@ -1,6 +1,5 @@
 .app-nav {
     @include outer-container;
-    //  margin: spacer(1) 0;
     overflow: auto;
     font-size: 1.25em;
     
@@ -37,6 +36,7 @@
 
 header nav {
     text-align: right;
+    margin-top: spacer(.5);
     
     @include media($mobile) {
         display: none;
