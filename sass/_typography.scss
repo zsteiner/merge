@@ -63,3 +63,12 @@ strong {
 .c-alert {
     color: $alert;   
 }
+
+.list-bullets {
+    padding-left: 2em;
+    list-style: disc;
+    
+    li {
+        margin-bottom: .5em;
+    }
+}

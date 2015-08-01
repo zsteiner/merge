@@ -137,6 +137,12 @@ strong {
 .c-alert {
   color: #FE3D42; }
 
+.list-bullets {
+  padding-left: 2em;
+  list-style: disc; }
+  .list-bullets li {
+    margin-bottom: .5em; }
+
 body {
   background-color: #3A3B3D;
   color: white; }

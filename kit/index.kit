@@ -9,8 +9,9 @@
 		<div class="page-wrap">
             <!-- @include 'header' -->
             <main role="main"> 
-               <article> <a class="button start-link" href="suspects.html"> <svg class="icon"><use xlink:href="#icon-view"></use></svg>Interactive Demo</a>
-                <p>I recommend reading through the design discussion below before jumping into the interactive prototype. Typically data tools require a bit of context and training before the first use.</p></article>
+               <article> <a class="button start-link" href="suspects.html"> <svg class="icon"><use xlink:href="#icon-view"></use></svg>View Interactive Demo</a>
+                <p>I recommend reading through the design discussion (or at least the Executive Summary) below before jumping into the interactive prototype. Typically data tools require a bit of context and training before the first use.</p>
+                </article>
                 <article>
                     <h3>The Problem</h3>
                     <p>Administrators of data systems often have to import data files or accept data from third-party systems. Import cuts down manual data entry, but data is rarely clean or current. This results in conflicts in records. Resolving these conflicts is typically a tedious process of finding and manually fixing conflicts. However, algorithmically merging has considerable risks involved. Typically, resolving conflicts requires a person's approval to ensure data integrity. It's also a relatively risky task because most databases join records in a destructive manner. Once the submit button is pressed the records are forever together.</p>
@@ -25,6 +26,15 @@
                     
                     <p><strong class="c-alert">Note:</strong> The interactive prototype is intended to demonstrate interactions. This demo does not save information between pages, either client-side or in a database. It is purely to provide an overview of a interface solution to common data system workflow. Refreshing pages or using the back button will not remember state as a real application would</p>
                 </article>
+                <article>
+                    <h3>Executive Summary (tl;dr version)</h3>
+                    <ul class="list-bullets">
+                        <li>Users sees a list of suspected duplicate records with percent match. User can merge 100% matches and resolve conflicts.</li>
+                        <li>Users sees a quick overview of conflicts between the records they are merging.</li>
+                        <li>Users resolve conflicts in a guided process by using mouse, touch, or keyboard.</li>
+                        <li>The final merged record is shown before saving it. The merge can be undone immediately or at a later date.</li>
+                    </ul>
+                </article> 
                 <article>
                     <h3>Overview</h3>
                     <section>
@@ -99,6 +109,7 @@
                     <p>To provide transparency, the final step provides the user feedback on their work before submitting it. The pieces of information about the employee that were created from the merge are highlighted with the <a class="b-success"><svg class="icon"><use xlink:href="#icon-check_circle"></use></svg></a> checkmark icon. The user can return to resolve conflicts, if something does not look correct. In a real app, it could be useful to click on a resolved piece of information to return directly to the relevant conflict merge screen. This way the user could quickly fix a mistake without having to go through the entire series of conflicts. For instance, clicking "Robert Sullivan" would return to the screen where the user could alternately select "Bob Sullivan". If the merged record doesn't look right, the user can abandon the whole merge without consequence.</p> 
                     <p>Clicking the <a class="b-success"><svg class="icon"><use xlink:href="#icon-merge"></use></svg> save merged employee</a> button creates a new "Robert Sullivan" record  and the two original records are linked to it. The user can also undo the merge immediately by clicking the <a class="b-alert"><svg class="icon"><use xlink:href="#icon-split"></use></svg> split records</a> button.</p>
                     <p>What happens if data is added or changed on the new record? How would a user separate these records? Assuming that history is tracked on all records (as it should be!), each entry in the history would need to be attributed to "Robert" or "Bob" (our two original records). Using the same card comparison interface, the user can quickly attribute the new or changed information to its respective record. The record created for the merge is tag deleted and the "Robert" and "Bob" are now separate and back in the wild.</p>
+                    <p><a href="suspects.html">View the demo.</a></p>
                 </article> 
                 <article>
                     <h3>Technical Information</h3>
