@@ -15,3 +15,10 @@
 @import "progress-bar";
 @import "toolbar";
 @import "notification";
+
+@import "../../global/sass/figures";
+@import "../../global/sass/frames";
+
+.example-image.tablet-example {
+        max-width: 30em;        
+} 

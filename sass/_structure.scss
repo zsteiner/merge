@@ -12,6 +12,14 @@ main {
     }    
 }
 
+article, section {
+    overflow: auto;
+}
+
+section {
+    margin-bottom: spacer(1);
+}
+
 article + article {
-    margin-top: spacer(2);
+    margin-top: spacer(3);
 }
